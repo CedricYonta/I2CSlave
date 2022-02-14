@@ -19,7 +19,7 @@ void receiveEvent(int bytes);
 
 void setup() {
 
-  Serial.begin(9600);
+ 
   // Define the LED pin as Output
 
   // Start the I2C Bus as Slave on address 9
