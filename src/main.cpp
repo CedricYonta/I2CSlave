@@ -13,6 +13,8 @@
 // Include the required Wire library for I2C<br>
 #include <Wire.h>
 
+I2C_SLAVE_LED_ADDRESS  9
+
 int LED = 6;
 int x = 0;
 void receiveEvent(int bytes);
@@ -23,7 +25,7 @@ void setup() {
   // Define the LED pin as Output
 
   // Start the I2C Bus as Slave on address 9
-  Wire.begin(9); 
+  Wire.begin(I2C_SLAVE_LED_ADDRESS); 
   // Attach a function to trigger when something is received.
   Wire.onReceive(receiveEvent);
 }
